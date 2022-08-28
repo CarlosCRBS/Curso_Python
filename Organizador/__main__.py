@@ -1,10 +1,9 @@
 """
 Módulo Principal
-Descrição: Este módulo realizada a chamada das funções dos outros módulos para realizar a leitura dos dados 
-fornecidos pelo usuário, calcular estes dados conforme a operação aritmética escolhida (adição, subtração, 
-multiplicação ou divisão), e printar o resultado na tela.
+Descrição: Este módulo organiza os arquivos de uma pasta de acordo com sua extensão, movendo-os para as Documentos e/ou Planilhas
+conforme for o caso.
 Autor: Carlos Rafael Batista Santos
-Data: 25/08/2022
+Data: 28/08/2022
 Versão: 1.0.0
 """
 
@@ -35,19 +34,19 @@ def main():
             lista_documentos.append(arquivo)                
                 
     if len(lista_planilhas) > 0:
-        os.makedirs('Planilhas/')
+        os.makedirs('Pasta/Planilhas/')
         for arquivo in lista_planilhas:
-            shutil.move(f"Pasta/{arquivo}", f"Planilhas/{arquivo}")
+            shutil.move(f"Pasta/{arquivo}", f"Pasta/Planilhas/{arquivo}")
     if len(lista_documentos) > 0:
-        os.makedirs('Documentos/')
+        os.makedirs('Pasta/Documentos/')
         for arquivo in lista_documentos:
-            shutil.move(f"Pasta/{arquivo}", f"Documentos/{arquivo}") 
+            shutil.move(f"Pasta/{arquivo}", f"Pasta/Documentos/{arquivo}") 
 
     # Saída
     print(f"Pasta Atual", os.getcwd())
     print(f"Arquivos no diretório Pasta/", os.listdir('Pasta/'))
-    print(f"Arquivos no diretório Planilhas/", os.listdir('Planilhas/'))
-    print(f"Arquivos no diretório Documentos/", os.listdir('Documentos/'))
+    print(f"Arquivos no diretório Planilhas/", os.listdir('Pasta/Planilhas/'))
+    print(f"Arquivos no diretório Documentos/", os.listdir('Pasta/Documentos/'))
    
     
     
