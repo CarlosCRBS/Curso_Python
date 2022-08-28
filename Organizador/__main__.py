@@ -1,6 +1,6 @@
 """
 Módulo Principal
-Descrição: Este módulo organiza os arquivos de uma pasta de acordo com sua extensão, movendo-os para as Documentos e/ou Planilhas
+Descrição: Este programa organiza os arquivos de uma pasta de acordo com sua extensão, movendo-os para as pastas Documentos e/ou Planilhas
 conforme for o caso.
 Autor: Carlos Rafael Batista Santos
 Data: 28/08/2022
